@@ -20,7 +20,10 @@ sudo docker run -Pdit \
 --name=ROS_learn \
 --privileged \
 -e NVIDIA_DRIVER_CAPABILITIES=all \
--e DISPLAY=$DISPLAY \
+-e DISPLAY=$DISPLAY \允许X11访问： 在主机上运行以下命令以允许X11访问：
+
+```Bash
+xhost +local:docker 
 -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
 -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
 -e QT_QPA_PLATFORM=wayland \
@@ -34,4 +37,10 @@ sudo docker run -Pdit \
 --ipc=host \
 -w /home/yuanluochen \
 yuanluochen/machine-vision:1.0
+```
+
+允许X11访问： 在主机上运行以下命令以允许X11访问：
+
+```Bash
+xhost +local:docker
 ```
