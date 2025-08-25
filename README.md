@@ -13,17 +13,14 @@
 9. Future Features: 
     1. Find Error.
 
-## 容器构建指令
+## 个人容器构建指令
 ```bash
 sudo docker run -Pdit \
 --gpus all \
---name=ROS_learn \
+--name=machine_vision \
 --privileged \
 -e NVIDIA_DRIVER_CAPABILITIES=all \
--e DISPLAY=$DISPLAY \允许X11访问： 在主机上运行以下命令以允许X11访问：
-
-```Bash
-xhost +local:docker 
+-e DISPLAY=$DISPLAY \
 -e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
 -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
 -e QT_QPA_PLATFORM=wayland \
